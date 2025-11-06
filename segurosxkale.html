@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xkale Seguros</title>
+    <style>
+        /* Colores */
+        :root {
+            --verde-planta: #6BD63D;
+            --blanco: #FFFFFF;
+            --negro: #000000;
+            --gris-escudo: #D1DBCC;
+            --azul-cielo: #338FFF;
+            --cielo-50: #91C9FF;
+            --morado-real: #C980ED;
+            --real-50: #E5B8FF;
+            --real-200: #994AC7;
+            --cielo-200: #2970DE;
+            --solar-200: #B2A657;
+            --amarillo-solar: #EBE080;
+            --solar-50: #FFFAC9;
+        }
+
+        /* Reset y base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--gris-escudo);
+            color: var(--negro);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--verde-planta);
+            color: var(--blanco);
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero */
+        .hero {
+            background-color: var(--solar-50);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: var(--verde-planta);
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--verde-planta);
+            color: var(--blanco);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* Servicios */
+        .servicios {
+            background-color: var(--blanco);
+            padding: 40px 20px;
+        }
+
+        .servicios h3 {
+            text-align: center;
+            color: var(--cielo-200);
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: var(--solar-200);
+            color: var(--negro);
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--negro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Xkale Seguros</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Protege lo que más importa con Xkale</h2>
+            <p>Seguros hechos para ti. Asesoría personalizada y confianza garantizada.</p>
+            <a href="#" class="btn-principal">Cotiza tu seguro</a>
+        </div>
+    </section>
+
+    <section class="servicios">
+        <div class="container">
+            <h3>Nuestros Servicios</h3>
+            <div class="grid">
+                <div class="card">Seguro de Vida</div>
+                <div class="card">Seguro de Vehículos</div>
+                <div class="card">Seguro de Salud</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Xkale. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

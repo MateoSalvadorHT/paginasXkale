@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carreras - Universidad Xkale</title>
+  <style>
+    :root {
+      --verde-planta: #6BD63D;
+      --blanco: #FFFFFF;
+      --negro: #000000;
+      --gris-escudo: #D1DBCC;
+      --azul-cielo: #338FFF;
+      --amarillo-solar: #EBE080;
+      --morado-real: #C980ED;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: var(--gris-escudo);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--blanco);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--verde-planta);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--negro);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--azul-cielo), var(--morado-real));
+      color: var(--blanco);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .carreras-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem auto;
+      max-width: 1200px;
+      padding: 1rem;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      padding: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--azul-cielo);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 0.5rem 1.2rem;
+      margin-top: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Xkale Universidad</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="#">Nosotros</a>
+      <a href="formulario.html">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Nuestras Carreras</h2>
+    <p>Programas académicos diseñados para transformar tu futuro.</p>
+  </div>
+
+  <div class="carreras-grid">
+    <div class="card">
+      <img width="225px" height="150px" src="https://pregrado.upc.edu.pe/facultad-de-ingenieria/ingenieria-de-software/img/Malla_curricular_especializada.jpg" alt="">
+      <h3>Ingeniería en Software</h3>
+      <p>Aprende a diseñar, desarrollar y gestionar soluciones tecnológicas con enfoque en innovación y calidad.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+      <img width="225px" height="150px" src="https://www.akamaiuniversity.us/wp-content/uploads/2024/03/master-de-administracion-de-empresas-1.jpg" alt="">
+      <h3>Administración de Empresas</h3>
+      <p>Desarrolla habilidades de liderazgo y gestión estratégica para crear impacto en el mundo empresarial.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+      <img width="225px" height="150px" src="imagenes/importancia-del-diseno-grafico-web-en-el-marketing.jpg" alt="">
+      <h3>Diseño Gráfico</h3>
+      <p>Combina creatividad y tecnología para comunicar ideas a través de experiencias visuales poderosas.</p>
+      <a href="disenoGrafico.html" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+       <img width="225px" height="150px" src="https://www.ibero.edu.co/sites/default/files/inline-images/ramas-de-ciencias-de-la-salud.jpg" alt="">
+      <h3>Ciencias de la Salud</h3>
+      <p>Programas orientados a la medicina, enfermería y nutrición con un enfoque humano y científico.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+       <img width="225px" height="150px" src="https://www.rebuildexpo.com/app/uploads/sites/4/2019/05/evoluci%C3%B3n-de-la-arquitectura.jpg" alt="">
+      <h3>Arquitectura</h3>
+      <p>Diseña espacios innovadores que equilibren estética, funcionalidad y sostenibilidad.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+       <img width="225px" height="150px" src="https://unifranz.edu.bo/wp-content/uploads/2024/11/INGLES-PSICOLOGIA.jpeg" alt="">
+      <h3>Psicología</h3>
+      <p>Comprende la mente y el comportamiento humano para ayudar a transformar vidas.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+       <img width="225px" height="150px" src="https://corporativo.eluniverso.com/publicidad/images/eluniverso-impresos.jpg" alt="">
+      <h3>Periodismo</h3>
+      <p>Aprende a administrar la verdad.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+       <img width="225px" height="150px" src="https://www.tusecretariavirtual.net/wp-content/uploads/2018/07/comunicacion-interna-1.jpg" alt="">
+      <h3>Comunicacíon</h3>
+      <p>Aprende a transmitir el mensaje.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Universidad Xkale. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="text/javascript" charset="utf-8">
+  (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod',
+    deploymentId: '17ad07cc-ef4e-4a60-a612-5765435284d9'
+  });
+</script>
+
+<script>
+  (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+  (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+  d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+  })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
+  ac('init', '1d38d27b-18c1-44e8-b035-9d8402d6b1ca', { region: 'use1' });
+  ac('pageview');
+</script>
+
+<script>
+  Genesys("command", "Journey.pageview", {
+  pageTitle: "Custom Page Title",
+  pageLocation: "custom-page-location",
+  customAttributes: { visitorPreferredLang: "en" },
+  traitsMapper: []
+});
+
+  Genesys("subscribe", "Plugin.eventName", function(o){/*callback*/});
+
+ 
+</script>
+
+</body>
+</html>

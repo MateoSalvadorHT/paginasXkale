@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(imagenes/XKALE-1-pq.png);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0); /* Ajusta el 0.5 para más o menos oscuridad */
+    z-index: 0;
+  }
+
+  .glass-container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.295);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.fila {
+  display: flex;
+  gap: 20px;
+}
+
+.fila-superior {
+  justify-content: space-between;
+}
+
+.fila-inferior {
+  justify-content: center;
+}
+
+.glass-container img {
+  width: 200px;
+  height: 125px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.glass-container img:hover {
+  transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+  <div class="glass-container">
+    <div class="fila fila-superior">
+      <a href="bancoXkale.html"><img src="imagenes/P_N@3x.png" alt="Página 1" /></a>
+      <a href="hospitalXkale.html"><img src="imagenes/P_N@3x.png" alt="Página 2" /></a>
+      <a href="universidadXkale.html"><img src="imagenes/universidadXkale.png" alt="Página 3" /></a>
+    </div>
+    <div class="fila fila-inferior">
+      <a href="segurosXkale.html"><img src="imagenes/segurosXkale.png" alt="Página 4" /></a>
+      <a href="shopXkale.html"><img src="imagenes/P_N@3x.png" alt="Página 5" /></a>
+    </div>
+  </div>
+</body>
+</html>

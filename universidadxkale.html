@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universidad Xkale</title>
+  <style>
+    :root {
+      --verde-planta: #6BD63D;
+      --blanco: #FFFFFF;
+      --negro: #000000;
+      --gris-escudo: #D1DBCC;
+      --azul-cielo: #338FFF;
+      --amarillo-solar: #EBE080;
+      --morado-real: #C980ED;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: var(--gris-escudo);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--blanco);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--verde-planta);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--negro);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--verde-planta), var(--azul-cielo));
+      color: var(--blanco);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 2rem;
+      background-color: var(--blanco);
+      margin: 1rem auto;
+      max-width: 960px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Xkale Universidad</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="#">Nosotros</a>
+      <a href="formulario.html">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Formamos el futuro contigo</h2>
+    <p>Programas innovadores con impacto real.</p>
+    <button class="btn" onclick="window.location.href='carreras.html'">Conoce más</button>
+
+  </div>
+
+  <section>
+    <h2>Nuestras Carreras</h2>
+    <p>Explora una amplia variedad de programas académicos adaptados a las necesidades del mercado.</p>
+  </section>
+
+  <section>
+    <h2>Sobre Xkale</h2>
+    <p>Somos una universidad comprometida con la excelencia educativa, la innovación y el desarrollo integral de nuestros estudiantes.</p>
+  </section>
+  <script type="text/javascript" charset="utf-8">
+  (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod',
+    deploymentId: '17ad07cc-ef4e-4a60-a612-5765435284d9'
+  });
+</script>
+
+<script>
+  (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+  (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+  d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+  })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
+  ac('init', '1d38d27b-18c1-44e8-b035-9d8402d6b1ca', { region: 'use1' });
+  ac('pageview');
+</script>
+
+<script>
+  Genesys("command", "Journey.pageview", {
+  pageTitle: "Custom Page Title",
+  pageLocation: "custom-page-location",
+  customAttributes: { visitorPreferredLang: "en" },
+  traitsMapper: []
+});
+
+  Genesys("subscribe", "Plugin.eventName", function(o){/*callback*/});
+
+ 
+</script>
+
+<script>
+  function trackConoceMas() {
+    // Aquí lanzas el evento a Genesys
+    Genesys("command", "Journey.record", {
+      eventName: "conoce-mas-click",
+      customAttributes: {
+        buttonLabel: "Conoce más",
+        page: window.location.pathname
+      }
+    });
+
+    // (Opcional) puedes redirigir o hacer otra acción
+    console.log("Evento Conoce Más enviado a Genesys");
+  }
+</script>
+
+  <footer>
+    <p>&copy; 2025 Universidad Xkale. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

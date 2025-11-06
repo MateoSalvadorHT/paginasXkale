@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hospital Xkale</title>
+  <style>
+    :root {
+      --verde-planta: #6BD63D;
+      --blanco: #FFFFFF;
+      --negro: #000000;
+      --gris-escudo: #D1DBCC;
+      --azul-cielo: #338FFF;
+      --cielo-50: #91C9FF;
+      --morado-real: #C980ED;
+      --real-50: #E5B8FF;
+      --real-200: #994AC7;
+      --cielo-200: #2970DE;
+      --solar-200: #B2A657;
+      --amarillo-solar: #EBE080;
+      --solar-50: #FFFAC9;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: var(--gris-escudo);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--blanco);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      border-bottom: 2px solid var(--verde-planta);
+    }
+
+    nav a {
+      color: var(--negro);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+      background-color: var(--blanco);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: var(--gris-escudo);
+      color: var(--negro);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .highlight {
+      background-color: var(--cielo-50);
+      padding: 1rem;
+      border-left: 5px solid var(--azul-cielo);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hospital Xkale</h1>
+    <p>Tu salud, nuestra prioridad</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Especialistas</a>
+    <a href="#">Citas</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Bienvenido a Xkale</h2>
+      <p>
+        Somos un hospital moderno con un enfoque humano y tecnología de punta para brindarte la mejor atención.
+      </p>
+      <button class="cta-button">Solicita tu cita</button>
+    </section>
+
+    <section class="highlight">
+      <h3>Atención 24/7</h3>
+      <p>Urgencias, consultas virtuales y soporte permanente en todas nuestras áreas.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Hospital Xkale. Todos los derechos reservados.
+  </footer>
+</body>
+</html>

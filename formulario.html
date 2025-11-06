@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admisiones - Universidad Xkale</title>
+  <style>
+    :root {
+      --verde-planta: #6BD63D;
+      --blanco: #FFFFFF;
+      --negro: #000000;
+      --gris-escudo: #D1DBCC;
+      --azul-cielo: #338FFF;
+      --amarillo-solar: #EBE080;
+      --morado-real: #C980ED;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background-color: var(--gris-escudo);
+      color: var(--negro);
+      line-height: 1.4;
+    }
+
+    header {
+      background-color: var(--blanco);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--verde-planta);
+    }
+
+    header h1 { margin: 0; font-size: 1.2rem; }
+
+    nav a {
+      margin-left: 1.2rem;
+      color: var(--negro);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--azul-cielo), var(--morado-real));
+      color: var(--blanco);
+      padding: 2.2rem 1.2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 12px;
+      padding: 1.4rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 1.2rem;
+    }
+
+    @media (max-width: 880px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    form .row { margin-bottom: 0.9rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.35rem; font-size: 0.95rem; }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid #d7d7d7;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    textarea { min-height: 110px; resize: vertical; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 0.7rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid var(--azul-cielo);
+      color: var(--azul-cielo);
+      font-weight: 700;
+    }
+
+    .meta {
+      font-size: 0.88rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+
+    .aside {
+      padding: 1rem;
+    }
+
+    .info-box {
+      background: linear-gradient(180deg, rgba(51,143,255,0.06), rgba(201,128,237,0.04));
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .success {
+      background: #E9FFEC;
+      border: 1px solid #B6F0C2;
+      color: #0B7A2A;
+      padding: 0.8rem;
+      border-radius: 8px;
+      margin-top: 0.8rem;
+      display: none;
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .tiny { font-size: 0.85rem; color: #666; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Xkale Universidad</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="carreras.html">Carreras</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Formulario de Admisiones</h2>
+    <p class="tiny">Completa tus datos y un asesor te contactará para acompañarte en el proceso.</p>
+  </div>
+
+  <div class="container">
+    <div class="card grid" aria-live="polite">
+      <!-- Form -->
+      <div>
+        <form id="admissionForm" novalidate>
+          <h3>Solicitud de admisión</h3>
+
+          <div class="row">
+            <label for="fullName">Nombre completo</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Ej. María Pérez" required>
+          </div>
+
+          <div class="row" style="display:grid; grid-template-columns: 1fr 1fr; gap:0.9rem;">
+            <div>
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+            </div>
+            <div>
+              <label for="phone">Teléfono (WhatsApp)</label>
+              <input id="phone" name="phone" type="tel" placeholder="+593 9 9999 999" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="career">Carrera de interés</label>
+            <select id="career" name="career" required>
+              <option value="">-- Selecciona una carrera --</option>
+              <option>Ingeniería en Software</option>
+              <option>Administración de Empresas</option>
+              <option selected>Diseño Gráfico</option>
+              <option>Ciencias de la Salud</option>
+              <option>Arquitectura</option>
+              <option>Psicología</option>
+            </select>
+          </div>
+
+          <div class="row" style="display:grid; grid-template-columns: 1fr 1fr; gap:0.9rem;">
+            <div>
+              <label for="average">Promedio de colegio (0 - 10)</label>
+              <input id="average" name="average" type="text" pattern="^[0-9]+(\.[0-9]+)?$" placeholder="Ej. 8.7">
+            </div>
+            <div>
+              <label for="entryTerm">Término de ingreso</label>
+              <select id="entryTerm" name="entryTerm">
+                <option>2025 - Semestre 1</option>
+                <option>2025 - Semestre 2</option>
+                <option>2026 - Semestre 1</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <label for="message">Mensaje (opcional)</label>
+            <textarea id="message" name="message" placeholder="Cuéntanos si necesitas beca, asesoría, etc."></textarea>
+          </div>
+
+          <div style="display:flex; gap:0.7rem; align-items:center; margin-top:0.6rem;">
+            <button type="submit" class="btn" id="submitBtn">Enviar solicitud</button>
+            <button type="button" class="btn secondary" id="chatBtn">Hablar con un asesor</button>
+            <span class="meta tiny">Tu información es confidencial. Respuesta en <strong>24–48 horas</strong>.</span>
+          </div>
+
+          <div class="success" id="successBox" role="status">
+            ¡Solicitud enviada! Un asesor te contactará pronto. Puedes abrir el chat si quieres hablar ahora.
+          </div>
+        </form>
+      </div>
+
+      <!-- Aside -->
+      <aside class="aside">
+        <div class="info-box">
+          <strong>Tip:</strong> Si quieres respuesta inmediata, haz clic en <em>Hablar con un asesor</em>. Nuestro asistente puede calcular becas automáticamente.
+        </div>
+
+        <div class="info-box">
+          <h4 style="margin:0 0 0.5rem 0">Documentos para la admisión</h4>
+          <ul style="margin:0 0 0.6rem 1.1rem; padding:0;">
+            <li>Cédula o pasaporte</li>
+            <li>Título de bachiller o certificado</li>
+            <li>Certificado de notas (2 últimos años)</li>
+          </ul>
+          <a href="#" class="btn" id="downloadChecklist">Descargar lista</a>
+        </div>
+
+        <div class="info-box">
+          <h4 style="margin:0 0 0.5rem 0">¿Necesitas ayuda?</h4>
+          <p style="margin:0" class="tiny">También puedes usar nuestro asistente para calcular tu beca o agendar una llamada con un asesor.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Universidad Xkale. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Genesys Web Messaging (Bootstrap) -->
+  <script type="text/javascript" charset="utf-8">
+    (function (g, e, n, es, ys) {
+      g['_genesysJs'] = e;
+      g[e] = g[e] || function () {
+        (g[e].q = g[e].q || []).push(arguments)
+      };
+      g[e].t = 1 * new Date();
+      g[e].c = es;
+      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+    })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+      environment: 'prod',
+      deploymentId: '17ad07cc-ef4e-4a60-a612-5765435284d9'
+    });
+  </script>
+
+  <!-- Journey SDK -->
+  <script>
+    (function(a,t,c,l,o,u,d){a['_genesysJourneySdk']=o;a[o]=a[o]||function(){
+    (a[o].q=a[o].q||[]).push(arguments)},a[o].l=1*new Date();u=t.createElement(c),
+    d=t.getElementsByTagName(c)[0];u.async=1;u.src=l;u.charset='utf-8';d.parentNode.insertBefore(u,d)
+    })(window, document, 'script', 'https://apps.mypurecloud.com/journey/sdk/js/web/v1/ac.js', 'ac');
+
+    // Inicializa (reemplaza el id si usas otro trackingId/region)
+    ac('init', '1d38d27b-18c1-44e8-b035-9d8402d6b1ca', { region: 'use1' });
+    ac('pageview');
+  </script>
+
+  <script>
+    // --- Helpers y lógica del formulario ---
+    const form = document.getElementById('admissionForm');
+    const successBox = document.getElementById('successBox');
+    const submitBtn = document.getElementById('submitBtn');
+    const chatBtn = document.getElementById('chatBtn');
+    const downloadChecklist = document.getElementById('downloadChecklist');
+
+    // Simula "descarga" de checklist (abre un PDF ficticio o simplemente alerta)
+    downloadChecklist.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Descarga: checklist_admisiones.pdf (simulado)');
+    });
+
+    // Abre messenger (si quieres abrir el widget desde tu propio botón)
+    chatBtn.addEventListener('click', () => {
+      try {
+        Genesys("command", "Messenger.open");
+      } catch (err) {
+        // fallback: abrir el messenger por comando alterno
+        console.warn('Messenger.open no disponible todavía.', err);
+      }
+      // También registramos un evento en Journey indicando que abrió chat
+      try {
+        Genesys("command", "Journey.record", {
+          eventName: "open_chat_from_admissions",
+          customAttributes: { page: window.location.pathname }
+        });
+      } catch (e) {
+        // Journey SDK fallback
+        if (typeof ac === 'function') {
+          ac('record', {
+            name: 'open_chat_from_admissions',
+            attributes: { page: window.location.pathname }
+          });
+        }
+      }
+    });
+
+    // Validación simple
+    function isEmailValid(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Manejo del submit
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      const data = {
+        fullName: form.fullName.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        career: form.career.value,
+        average: form.average.value.trim(),
+        entryTerm: form.entryTerm.value,
+        message: form.message.value.trim(),
+        page: window.location.pathname,
+        timestamp: new Date().toISOString()
+      };
+
+      // validaciones básicas
+      if (!data.fullName || !isEmailValid(data.email) || !data.phone || !data.career) {
+        alert('Por favor completa los campos requeridos (nombre, correo, teléfono, carrera).');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar solicitud';
+        return;
+      }
+
+      // 1) Registrar evento en Journey (Genesys + Journey SDK)
+      try {
+        Genesys("command", "Journey.record", {
+          eventName: "admission_form_submit",
+          customAttributes: data
+        });
+      } catch (err) {
+        // fallback con ac()
+        if (typeof ac === 'function') {
+          ac('record', {
+            name: 'admission_form_submit',
+            attributes: data
+          });
+        } else {
+          console.warn('Journey record no disponible', err);
+        }
+      }
+
+      // 2) (Opcional) Enviar a tu backend — aquí solo simulamos
+      // fetch('/api/admissions', { method: 'POST', body: JSON.stringify(data) })
+
+      // 3) Mostrar confirmación al usuario
+      successBox.style.display = 'block';
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar solicitud';
+
+      // 4) Identificar el usuario en Journey (si queremos que pase a "identificado")
+      try {
+        Genesys("command", "Journey.identify", {
+          customerId: data.email,
+          attributes: {
+            name: data.fullName,
+            email: data.email,
+            phone: data.phone,
+            careerInterest: data.career
+          }
+        });
+      } catch (err) {
+        if (typeof ac === 'function') {
+          ac('identify', {
+            customerId: data.email,
+            attributes: {
+              name: data.fullName,
+              email: data.email,
+              phone: data.phone,
+              careerInterest: data.career
+            }
+          });
+        }
+      }
+
+      // 5) Extra: sugerir abrir chat con asesor (opcional)
+      setTimeout(() => {
+        // Mostrar caja pequeña que sugiera abrir el chat
+        if (confirm('¿Quieres hablar ahora con un asesor para acelerar tu admisión?')) {
+          try { Genesys("command", "Messenger.open"); } catch(e){ /* noop */ }
+        }
+      }, 700);
+    });
+  </script>
+
+</body>
+</html>

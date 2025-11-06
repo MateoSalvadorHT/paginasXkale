@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xkale - Tienda de Ropa</title>
+  <style>
+    /* Paleta de colores */
+    :root {
+      --verde-planta: #6BD63D;
+      --blanco: #FFFFFF;
+      --negro: #000000;
+      --gris-escudo: #D1DBCC;
+      --azul-cielo: #338FFF;
+      --cielo-50: #91C9FF;
+      --morado-real: #C980ED;
+      --real-50: #E5B8FF;
+      --real-200: #994AC7;
+      --cielo-200: #2970DE;
+      --solar-200: #B2A657;
+      --amarillo-solar: #EBE080;
+      --solar-50: #FFFAC9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--blanco);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: var(--blanco);
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-color: var(--gris-escudo);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h2 {
+      color: var(--verde-planta);
+      font-size: 2.5rem;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      background-color: var(--solar-50);
+    }
+
+    .producto {
+      background-color: var(--blanco);
+      border: 1px solid var(--gris-escudo);
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .producto h3 {
+      color: var(--morado-real);
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header, .hero, footer {
+        text-align: center;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Xkale</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Moda sostenible con estilo</h2>
+    <p>Descubre nuestra nueva colección primavera-verano</p>
+  </section>
+
+  <section class="productos">
+    <div class="producto">
+      <img src="https://via.placeholder.com/200x250?text=Vestido+Verde" alt="Vestido Verde">
+      <h3>Vestido Verde</h3>
+      <p>$39.99</p>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/200x250?text=Camisa+Cielo" alt="Camisa Cielo">
+      <h3>Camisa Cielo</h3>
+      <p>$29.99</p>
+    </div>
+    <div class="producto">
+      <img src="https://via.placeholder.com/200x250?text=Chaqueta+Morada" alt="Chaqueta Morada">
+      <h3>Chaqueta Morada</h3>
+      <p>$59.99</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Xkale. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
