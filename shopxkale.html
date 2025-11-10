@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xkale - Tienda de Ropa</title>
+  <title>XkaleTech</title>
   <style>
     /* Paleta de colores */
     :root {
@@ -38,6 +38,11 @@
       align-items: center;
     }
 
+    header a {
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+
     header h1 {
       margin: 0;
       font-size: 1.8rem;
@@ -57,13 +62,17 @@
     }
 
     .hero h2 {
-      color: var(--verde-planta);
+      color: var(--azul-cielo);
       font-size: 2.5rem;
+    }
+
+    .hero h3 {
+      color: var(--negro);
     }
 
     .productos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       padding: 2rem;
       background-color: var(--solar-50);
@@ -75,11 +84,24 @@
       padding: 1rem;
       border-radius: 10px;
       text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .producto img {
-      width: 100%;
+      width: 80%;
       border-radius: 8px;
+      height: 180px;
+      object-fit: contain;
+    }
+
+    .producto a {
+      color: #000000;
+      text-decoration: none;
     }
 
     .producto h3 {
@@ -104,41 +126,71 @@
 <body>
 
   <header>
-    <h1>Xkale</h1>
+    <a href="index.html"><h1>XkaleTech</h1></a>
     <nav>
       <a href="#">Inicio</a>
       <a href="#">Productos</a>
-      <a href="#">Nosotros</a>
+      <a href="#">Ofertas</a>
       <a href="#">Contacto</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Moda sostenible con estilo</h2>
-    <p>Descubre nuestra nueva colección primavera-verano</p>
+    <h2>Tecnología que impulsa tu mundo</h2>
+    <h3>Descubre los últimos dispositivos en nuestra colección 2025</h3>
   </section>
 
   <section class="productos">
     <div class="producto">
-      <img src="https://m.media-amazon.com/images/I/5160fvHs7LL._AC_SY741_.jpg" alt="Vestido Verde">
-      <h3>Vestido Verde</h3>
-      <p>$39.99</p>
+      <a href="Laptop.html">
+        <img src="https://m.media-amazon.com/images/I/71rRsk2qSnL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Laptop Xkale Pro">
+        <h3>Laptop Lenovo Pro</h3>
+        <p>$899.99</p>
+      </a>
     </div>
+
     <div class="producto">
-      <img src="https://m.media-amazon.com/images/I/51s8Gah7h1L._AC_SX679_.jpg" alt="Camisa Cielo">
-      <h3>Camisa Cielo</h3>
-      <p>$29.99</p>
+      <a href="#">
+        <img src="https://m.media-amazon.com/images/I/610NdWdTLiL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Auriculares Inalámbricos">
+        <h3>Auriculares Inalámbricos</h3>
+        <p>$79.99</p>
+      </a>
     </div>
+
     <div class="producto">
-      <img src="https://m.media-amazon.com/images/I/71IapvfL+6L._AC_SX569_.jpg" alt="Chaqueta Morada">
-      <h3>Chaqueta Morada</h3>
-      <p>$59.99</p>
+      <a href="#">
+        <img src="https://m.media-amazon.com/images/I/51GeUyZUB9L._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Smartwatch Xkale Fit">
+        <h3>Smartwatch Xkale Fit</h3>
+        <p>$129.99</p>
+      </a>
+    </div>
+
+    <div class="producto">
+      <a href="#">
+        <img src="https://m.media-amazon.com/images/I/817j1M2DAnL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Monitor Ultra HD 27”">
+        <h3>Monitor Ultra HD 27”</h3>
+        <p>$249.99</p>
+      </a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Xkale. Todos los derechos reservados.</p>
+    <p>© 2025 XkaleTech. Todos los derechos reservados.</p>
   </footer>
 
 </body>
+<script type="text/javascript" charset="utf-8">
+  (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod',
+    deploymentId: '036fd1d7-ae37-4315-98f1-00e6b7f476f0'
+  });
+</script>
 </html>

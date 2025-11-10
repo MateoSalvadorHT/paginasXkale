@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laptop Xkale Pro - XkaleTech</title>
+  <style>
+    :root {
+      --verde-planta: #6BD63D;
+      --blanco: #FFFFFF;
+      --negro: #000000;
+      --gris-escudo: #D1DBCC;
+      --azul-cielo: #338FFF;
+      --amarillo-solar: #EBE080;
+      --morado-real: #C980ED;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--gris-escudo);
+      color: var(--negro);
+    }
+
+    header {
+      background-color: var(--verde-planta);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--blanco);
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(to right, var(--morado-real), var(--azul-cielo));
+      color: var(--blanco);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .producto {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: var(--blanco);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .producto img {
+      width: 400px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .detalle {
+      max-width: 500px;
+    }
+
+    h2 {
+      color: var(--azul-cielo);
+      margin-top: 0;
+    }
+
+    ul {
+      line-height: 1.6rem;
+      margin-left: 1rem;
+    }
+
+    .precio {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--morado-real);
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--verde-planta);
+      color: var(--blanco);
+      padding: 0.8rem 1.5rem;
+      margin-top: 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #57b831;
+    }
+
+    footer {
+      background-color: var(--negro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .producto {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .producto img {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>XkaleTech</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="shopxkale.html">Productos</a>
+      <a href="#">Ofertas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Laptop Xkale Pro</h2>
+    <p>Rendimiento, diseño y potencia para tus proyectos más exigentes.</p>
+  </div>
+
+  <div class="producto">
+    <img src="https://m.media-amazon.com/images/I/71rRsk2qSnL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Laptop Xkale Pro">
+
+    <div class="detalle">
+      <h2>Descripción del Producto</h2>
+      <p>
+        La <strong>Laptop Xkale Pro</strong> combina potencia y elegancia para ofrecerte el mejor rendimiento en tareas profesionales, creativas y de entretenimiento.
+        Equipada con los últimos procesadores Intel, pantalla Full HD y batería de larga duración, es tu aliada ideal para trabajar desde cualquier lugar.
+      </p>
+
+      <h2>Especificaciones Técnicas</h2>
+      <ul>
+        <li>Procesador Intel Core i7 de 13ª generación</li>
+        <li>Memoria RAM de 16 GB DDR5</li>
+        <li>Almacenamiento SSD de 512 GB</li>
+        <li>Pantalla IPS Full HD de 15.6”</li>
+        <li>Gráficos Intel Iris Xe</li>
+        <li>Batería de larga duración (hasta 10 horas)</li>
+        <li>Sistema operativo Windows 11</li>
+      </ul>
+
+      <p class="precio">$899.99</p>
+      <a href="https://wa.me/593990537534?text=Hola,%20quiero%20comprar%20la%20Laptop%20Xkale%20Pro" class="btn">Comprar por WhatsApp 💬</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 XkaleTech. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+
+<script type="text/javascript" charset="utf-8">
+  (function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod',
+    deploymentId: '036fd1d7-ae37-4315-98f1-00e6b7f476f0'
+  });
+</script>
+</html>
+
