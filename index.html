@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio</title>
+
   <style>
     * {
       margin: 0;
@@ -13,74 +14,89 @@
 
     body {
       background-image: url(imagenes/XKALE-1-pq.png);
+      background-size: cover;
+      background-position: center;
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
     }
+
     body::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0); /* Ajusta el 0.5 para más o menos oscuridad */
-    z-index: 0;
-  }
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+      z-index: 0;
+    }
 
-  .glass-container {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.295);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+    .glass-container {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 40px;
 
-.fila {
-  display: flex;
-  gap: 20px;
-}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      width: 90%;
+    }
 
-.fila-superior {
-  justify-content: space-between;
-}
+    .glass-container a {
+      display: flex;
+      justify-content: center;
+    }
 
-.fila-inferior {
-  justify-content: center;
-}
+    .glass-container img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
-.glass-container img {
-  width: 200px;
-  height: 125px;
-  border-radius: 10px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+    .glass-container img:hover {
+      transform: scale(1.08);
+    }
 
-.glass-container img:hover {
-  transform: scale(1.1);
-}
+    /* 📱 Tablets */
+    @media (max-width: 900px) {
+      .glass-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px;
+      }
+    }
+
+    /* 📱 Móviles */
+    @media (max-width: 600px) {
+      .glass-container {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+
+      .glass-container img {
+        max-width: 260px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="glass-container">
-    <div class="fila fila-superior">
-      <a href="Banco/bancoxkale.html"><img src="imagenes/P_N@3x.png" alt="Página 1" /></a>
-      <a href="Hospital/hospitalxkale.html"><img src="imagenes/P_N@3x.png" alt="Página 2" /></a>
-      <a href="Universidad/universidadxkale.html"><img src="imagenes/universidadXkale.png" alt="Página 3" /></a>
-    </div>
-    <div class="fila fila-inferior">
-      <a href="Seguros/segurosxkale.html"><img src="imagenes/segurosXkale.png" alt="Página 4" /></a>
-      <a href="XkaleTech/shopxkale.html"><img src="imagenes/P_N@3x.png" alt="Página 5" /></a>
-    </div>
+    <a href="Banco/bancoxkale.html"><img src="imagenes/P_N@3x.png" alt="Banco" /></a>
+    <a href="Hospital/hospitalxkale.html"><img src="imagenes/P_N@3x.png" alt="Hospital" /></a>
+    <a href="Universidad/universidadxkale.html"><img src="imagenes/universidadXkale.png" alt="Universidad" /></a>
+    <a href="Seguros/segurosxkale.html"><img src="imagenes/segurosXkale.png" alt="Seguros" /></a>
+    <a href="XkaleTech/shopxkale.html"><img src="imagenes/P_N@3x.png" alt="Xkale Tech" /></a>
   </div>
 </body>
 </html>
